@@ -89,7 +89,7 @@
     padding-left: 50px;
     align-items: center;
 }
-.item_header div{
+.item_header th{
     width: 200px;
     color: #888;
     line-height: 30px;
@@ -239,30 +239,14 @@ footer {
                 <div class="card">
                   <h5 class="loginw">Order List</h5><br>
                   <div>
-                    <div class="item_header d-flex justify-content-center">
-                        <div class="item_detail">Product name</div>
-                        <div class="price">Unit Price</div>
-                        <div class="count">Quantity</div> 
-                        <div class="amount">Total Price</div>
-                        <div class="operate">Action</div>
-                    </div>
-                    <div class="item_header item_body d-flex justify-content-center">
-                        <div class="item_detail">
-                            <img src="img/狗屋.jpg" alt="">
-                            <div class="name">Dog house</div>
-                        </div>
-            
-                        <div class="price"><span>NT$</span>500</div>
-                        <div class="count">
-                            <button>-</button>
-                            1
-                            <button>+</button>
-                        </div> 
-                        <div class="amount">NT$ 500</div>
-                        <div class="operate">
-                            <button>Delete</button>
-                        </div>
-                    </div>
+                    <table class="item_header d-flex justify-content-center">
+                        <th class="item_detail">Product name</th>
+                        <th class="price">Unit Price</th>
+                        <th class="count">Quantity</th> 
+                        <th class="amount">Total Price</div>
+                        <th class="operate">Action</th>
+                    </table>
+                    
                   </div>
                 </div>
                 </div>
@@ -426,5 +410,6 @@ footer {
         document.getElementById("username2").value=username2;
         document.getElementById("mail").value=mail;
     </script>
+  
   </body>
 </html>
