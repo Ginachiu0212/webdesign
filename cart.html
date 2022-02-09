@@ -77,6 +77,56 @@
   background-color: beige;
   border: none;
 }
+
+
+
+.item_header{
+    width:100%;
+    margin: 0 auto;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 3px;
+    padding-left: 50px;
+    align-items: center;
+}
+.item_header div{
+    width: 200px;
+    color: #888;
+    line-height: 30px;
+}
+.item_header .item_detail{
+    width: 50%;
+}
+.item_body{
+    margin-top: 20px;
+    height: 100px;
+    align-items: center;    
+}
+.item_detail img{
+    width: 80px;
+    height: 80px;
+    border-radius: 3px;
+    /* margin-top: 10px; */
+    float: left;
+}
+.item_detail .name{
+    margin-left: 100px;
+    margin-top: 20px;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .table th {
   color:rgb(240, 106, 58);
   font: bold;
@@ -88,6 +138,7 @@
   border-color:rgb(241, 212, 190);
   border-radius: 4px;
   color: royalblue;
+  width: 300px;
 }
 .tw {
   border-color:rgb(241, 212, 190) ;
@@ -184,13 +235,39 @@ footer {
           </div>
           <div class="container">
             <div class="pr1 row py-4">
-              <div class="col-md-6">
+              <div class="col-md-12">
                 <div class="card">
                   <h5 class="loginw">Order List</h5><br>
-                  <img class="loginp" src="" alt="">
+                  <div>
+                    <div class="item_header d-flex justify-content-center">
+                        <div class="item_detail">Product name</div>
+                        <div class="price">Unit Price</div>
+                        <div class="count">Quantity</div> 
+                        <div class="amount">Total Price</div>
+                        <div class="operate">Action</div>
+                    </div>
+                    <div class="item_header item_body d-flex justify-content-center">
+                        <div class="item_detail">
+                            <img src="img/狗屋.jpg" alt="">
+                            <div class="name">Dog house</div>
+                        </div>
+            
+                        <div class="price"><span>NT$</span>500</div>
+                        <div class="count">
+                            <button>-</button>
+                            1
+                            <button>+</button>
+                        </div> 
+                        <div class="amount">NT$ 500</div>
+                        <div class="operate">
+                            <button>Delete</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-12">
                 <div class="card">
                   <h5 class="loginw">Pickup Information</h5><br>
                   <form action="https://www.townway.com.tw/auth" method="post">
@@ -336,19 +413,18 @@ footer {
     return cookieObj;
 }
 
-
-function getCookieByName(name) {
-    var value = parseCookie()[name];
-    if (value) {
+    function getCookieByName(name) {
+      var value = parseCookie()[name];
+      if (value) {
         value = decodeURIComponent(value);
-    }
+      }
 
     return value;
 }
-var username2=getCookieByName("username2");
-var mail=getCookieByName("mail");
-document.getElementById("username2").value=username2;
-document.getElementById("mail").value=mail;
+      var username2=getCookieByName("username2");
+      var mail=getCookieByName("mail");
+        document.getElementById("username2").value=username2;
+        document.getElementById("mail").value=mail;
     </script>
   </body>
 </html>
